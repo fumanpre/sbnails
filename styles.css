@@ -1,0 +1,276 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.custom-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* ensures it stays above other content */
+  background-color: white; /* important to cover content behind when sticky */
+}
+
+.logo {
+  display: flex;
+  align-items: center; /* Vertically center image and text */
+  gap: 12px;
+}
+
+.logo-image {
+  width: 100%;
+  max-width: 75px; /* Or any desired size */
+  height: auto;
+  border-radius: 40%;
+  display: block;
+}
+
+.main-logo {
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  color: rgb(110, 87, 76);
+}
+
+.logo-subtext {
+  color: rgb(110, 87, 76);
+}
+
+.nav-pills .nav-link {
+  color: rgb(110, 87, 76);
+  font-weight: 500;
+  background-color: transparent !important;
+  transition: font-weight 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+  color: rgb(150, 110, 95);
+  font-weight: bold;
+}
+
+.nav-pills .nav-link.active {
+  font-weight: 800; /* Make active even more bold */
+  background-color: transparent !important;
+  color: rgb(110, 87, 76);
+}
+
+.carousel-image {
+  width: 100%;
+  height: 500px; /* You can adjust this height */
+  object-fit: cover; /* Crops the image to fill without distortion */
+}
+
+.carousel-inner {
+  height: 80vh; /* Takes 80% of viewport height — adjust as needed */
+}
+
+.carousel-image {
+  width: 100%;
+  height: 92vh;
+  object-fit: cover; /* Fills the area while keeping image ratio */
+  filter: brightness(70%) saturate(70%);
+}
+
+.carousel-caption {
+  bottom: 10%; /* Move captions up a bit if needed */
+}
+
+#myCarousel {
+  margin-top: -27px; /* Adjust value as needed */
+}
+
+.carousel-caption {
+  margin-bottom: 16rem; /* Increase or decrease as needed */
+}
+
+.btn-custom {
+  background-color: rgb(180, 129, 109); /* Button base color */
+  color: white; /* Text color */
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-custom:hover {
+  background-color: rgb(183, 110, 121); /* Slightly darker for hover */
+  color: white;
+  transform: scale(1.05); /* Slight pop on hover */
+  text-decoration: none;
+}
+
+.footer-logo {
+  width: 3rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.custom-padding-left {
+  margin-left: 20vw; /* adjust as needed */
+  margin-bottom: 40vh;
+}
+
+.custom-padding-right {
+  margin-right: 20vw; /* adjust as needed */
+  margin-bottom: 40vh;
+}
+
+.image-carousel-wrapper {
+  max-width: 100%;
+  position: relative;
+  padding: 20px 62px;
+}
+
+.image-track {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.image-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-img {
+  flex: 0 0 auto;
+  width: 200px;
+  margin-right: 15px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.carousel-scroll-left,
+.carousel-scroll-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0 10px;
+  opacity: 0.7;
+}
+.carousel-scroll-left:hover,
+.carousel-scroll-right:hover {
+  opacity: 1;
+}
+
+.carousel-scroll-left {
+  left: 0;
+}
+.carousel-scroll-right {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .carousel-img {
+    width: 140px;
+  }
+}
+
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+#call-button-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+}
+
+.call-row {
+  border: 1px solid black; /* Your black border */
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  cursor: pointer;
+}
+
+.call-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.call-button {
+  border-radius: 25px;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: white;
+  border: none;
+}
+
+.phone-number-text {
+  font-weight: 700; /* Make it bold */
+  font-size: 1.1rem;
+  color: #000; /* Black color */
+}
+
+@media (max-width: 999px) {
+  /* Center the entire header container vertically and horizontally */
+  header.d-flex.flex-wrap {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+  }
+
+  /* Center logo and logo text */
+  .logo {
+    justify-content: center !important;
+    margin-bottom: 15px;
+  }
+
+  /* Make nav-wrapper full width and center nav pills */
+  .nav-wrapper {
+    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  /* Center nav pills horizontally */
+  .nav.nav-pills {
+    justify-content: center;
+  }
+
+  /* Make each nav item inline and spaced nicely */
+  .nav-item {
+    margin: 0 8px;
+  }
+}
